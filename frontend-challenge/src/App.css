@@ -3,10 +3,11 @@
   --winter: #aad8d3;
   --turquoise: #00adb5;
   --black: #393e46;
+  --while: #ffffff;
 }
 
 body {
-  background-color: var(--grey);
+  background-color: var(--white);
 }
 
 .card {
