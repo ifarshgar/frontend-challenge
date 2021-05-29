@@ -15,6 +15,7 @@ function Home() {
             <h1 className="intro-title">Sesam.io frontend challenge</h1>
             <p className="intro-text"> <br/> </p>
             <a className="btn btn-custom" href="#people">List of People</a>
+
           </div>
 
           <div>

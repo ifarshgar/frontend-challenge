@@ -3,13 +3,57 @@
   --winter: #aad8d3;
   --turquoise: #00adb5;
   --black: #393e46;
-  --while: #ffffff;
+  --white: #ffffff;
+  --green: #00bc95;
 }
 
 body {
   background-color: var(--white);
 }
 
+.people_list {
+  padding-bottom: 1em;
+}
+
 .card {
-  width: 18rem;
+  border-radius: 4px;
+  box-shadow: 0px 4px 28px 0px #00000014;
+  margin-bottom: 20px;
+  transition: 1s ease all;
+}
+
+.card:hover{
+  box-shadow: 0px 0px 15px #9e9c9c;
+}
+
+.company {
+  font-weight: 100;
+  color: #737373FF;
+  padding-right: 10px;
+}
+
+.company_name {
+  padding-top: 10px;
+}
+
+.searchbox {
+  text-align: right;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.search_input {
+  height: 2.3em;
+  margin-right: 2px;
+}
+
+.search_button {
+  height: 2.3em;
+  background: var(--green);
+  color: var(--white);
+}
+
+.sort {
+  text-align: left;
+  margin-top: -0.5em;
 }
