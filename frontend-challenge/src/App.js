@@ -2,7 +2,8 @@
 import React, { Fragment } from "react";
 import "./App.css";
 import GetData from "./GetData";
-import $ from 'jquery'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import GetUser from "./GetUser";
 
 function Home() {
   return (
@@ -14,14 +15,14 @@ function Home() {
           <div>
             <h1 className="intro-title">Sesam.io frontend challenge</h1>
             <p className="intro-text"> <br/> </p>
-            <a className="btn btn-custom" href="#people">List of People</a>
+            <a className="btn btn-custom" href="./#people">List of People</a>
 
           </div>
 
           <div>
             <h1 className="intro-title">About Me</h1>
             <p className="intro-text"><br/></p>
-            <a className="btn btn-custom" href="#footer">Let's go</a>
+            <a className="btn btn-custom" href="./#footer">Let's go</a>
           </div>
 
         </div>
@@ -43,14 +44,14 @@ function Navbar() {
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a className="navbar-brand" href="#home">Sesam.io</a>
+          <a className="navbar-brand" href="./">Sesam.io</a>
         </div>
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#people">People</a></li>
-            <li><a href="#footer">About</a></li>
+            <li><a href="./#home">Home</a></li>
+            <li><a href="./#people">People</a></li>
+            <li><a href="./#footer">About</a></li>
           </ul>
         </div>
       </div>
@@ -135,18 +136,29 @@ function App() {
   const smoothScroll = document.createElement("script");    
   smoothScroll.async = true;    
   smoothScroll.src = "./js/SmoothScroll.js";
-
-  $(".loader").delay(300).fadeOut();
-  $(".animationload").delay(600).fadeOut("slow");
   
   return (
-    <Fragment>
+    <BrowserRouter>
       <Navbar />
       <Home />
-      <GetData />
-      <Msg />
+
+      <Switch>
+        <Route exact path="/">
+          <Fragment>
+            <GetData />
+            <Msg />
+          </Fragment>
+        </Route>
+        
+        <Route path="/user"
+        component={() => <h1>Users</h1>}
+        >
+          <GetUser />
+        </Route>
+      </Switch>
+
       <Footer />
-    </Fragment>
+    </BrowserRouter>
   );
 }
 
