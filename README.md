@@ -1,6 +1,15 @@
 # Sesam frontend challenge
 A small programming challenge for applicants for frontend positions in Sesam.
 
+ Responsive Base Page:
+ <img src="Base%20Page.png" alt="base page" class="inline"/>
+ 
+ Responsive Base Page when searching: 
+ <img src="Base%20Page%20with%20Search.png" alt="base page" class="inline"/>
+ 
+ Responsive User Page:
+ <img src="User%20Page.png" alt="base page" class="inline"/>
+
 # Overview
 This task is designed to test some general skills that are important for a frontend developer without being too time-consuming. Some of the things you encounter while working on this task: Git, GitHub, a JSON REST API, JavaScript (React), CSS.
 
